@@ -1,0 +1,54 @@
+{
+  "taskId": "oss_meta_flow_task_instance-1583575141286",
+  "sourceMapping": {
+    "sourceTable": "oss_meta_flow_task_instance",
+    "source": "oss-vm-source"
+  },
+  "toMapping": {
+    "targetTable": "t_import_test",
+    "rowKey": "${oss_row_id}",
+    "cellMapping": [
+      {
+        "sourceValue": "${cf_errorMessage}",
+        "filter": false,
+        "targetName": "error",
+        "type": "string",
+        "dataConvertClass": "string"
+      },
+      {
+        "sourceValue": "${cf_log}",
+        "filter": false,
+        "targetName": "log",
+        "type": "string",
+        "dataConvertClass": "string"
+      },
+      {
+        "sourceValue": "${cf_status}",
+        "filter": false,
+        "targetName": "status",
+        "type": "string",
+        "dataConvertClass": "string"
+      },
+      {
+        "sourceValue": "${cf_taskName}",
+        "filter": false,
+        "targetName": "name",
+        "type": "string",
+        "dataConvertClass": "string"
+      }
+    ]
+  },
+  "taskConfig": {
+    "pageSql": "select * from oss_meta_flow_task_instance order by cf_ossRowTime limit ?,?",
+    "pageSqlFactory": null,
+    "pageSqlFactoryParam": null,
+    "pageSize": 1000,
+    "position": 0,
+    "timeOffset": 0,
+    "latestStartTime": 0,
+    "filePath": null,
+    "taskInfoSec": 0,
+    "affectFactory": null,
+    "affectFactoryParam": null
+  }
+}
