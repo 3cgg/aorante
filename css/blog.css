@@ -15,7 +15,10 @@
     padding-left: 15px;
 }
 .blog-main{
-    margin-top: 60px;
+    margin-top: 90px;
+    padding: 15px 0px;
+    margin-bottom: 120px;
+
 }
 
 
@@ -31,4 +34,18 @@
     text-align: center !important;
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
+}
+
+.blog-footer .contact{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-footer .copyright{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.index .blog-carousel{
+    margin-top: 90px;
 }
