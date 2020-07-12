@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    include: #此配置需要放在application，如果放在bootstrap，则一些属性配置不能使用@Value注入
+      - cpp
+
+  aop:
+    proxy-target-class: true
+  application:
+    name: aorante
+
+logging:
+  level:
+    -ROOT: debug
+  path: ${spring.application.name}
+
+server:
+  port: 80
+
